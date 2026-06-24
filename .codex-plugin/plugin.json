@@ -1,0 +1,41 @@
+{
+  "name": "kamae-scala",
+  "version": "0.1.0",
+  "description": "Kamae (構え) - robust server-side Scala design and review skills",
+  "author": {
+    "name": "kamae-scala contributors",
+    "url": "https://github.com/manji-0/kamae-scala"
+  },
+  "homepage": "https://github.com/manji-0/kamae-scala",
+  "repository": "https://github.com/manji-0/kamae-scala",
+  "license": "MIT",
+  "keywords": [
+    "scala",
+    "domain-modeling",
+    "state-machine",
+    "either",
+    "opaque-type",
+    "coding-agent",
+    "server-side"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Kamae Scala",
+    "shortDescription": "Robust Scala domain design and review",
+    "longDescription": "Design and review server-side Scala domain code with typed states, Either-based errors, validated boundaries, PII-safe patterns, and adversarial review checklists.",
+    "developerName": "kamae-scala contributors",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/manji-0/kamae-scala",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Use $kamae-scala to refine this Scala domain model.",
+      "Use $kamae-scala-review to review this Scala diff."
+    ]
+  }
+}

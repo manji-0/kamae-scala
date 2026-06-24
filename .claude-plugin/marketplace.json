@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "kamae-scala",
+  "description": "Kamae (構え) - robust server-side Scala design harness",
+  "owner": {
+    "name": "kamae-scala contributors"
+  },
+  "plugins": [
+    {
+      "name": "kamae-scala",
+      "description": "Server-side Scala design and review skills with rules-based customization",
+      "source": "./",
+      "category": "development",
+      "homepage": "https://github.com/manji-0/kamae-scala",
+      "strict": false,
+      "skills": [
+        "./skills/kamae-scala",
+        "./skills/kamae-scala-review"
+      ]
+    }
+  ]
+}

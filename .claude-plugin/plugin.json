@@ -1,0 +1,25 @@
+{
+  "name": "kamae-scala",
+  "description": "Kamae (構え) - robust server-side Scala design and review skills",
+  "version": "0.1.0",
+  "author": {
+    "name": "kamae-scala contributors",
+    "url": "https://github.com/manji-0/kamae-scala"
+  },
+  "homepage": "https://github.com/manji-0/kamae-scala",
+  "repository": "https://github.com/manji-0/kamae-scala",
+  "license": "MIT",
+  "skills": [
+    "./skills/kamae-scala",
+    "./skills/kamae-scala-review"
+  ],
+  "keywords": [
+    "scala",
+    "domain-modeling",
+    "state-machine",
+    "either",
+    "opaque-type",
+    "coding-agent",
+    "server-side"
+  ]
+}
