@@ -26,3 +26,9 @@ Flag outbox/idempotency/versioning changes without retry or conflict tests.
 ## 7.6 Are boundary and observability behaviors tested? - Medium
 
 Flag redaction, auth, or boundary parsing changes without tests.
+
+## 20.7 Are input-wide invariants covered with property tests? - Low
+
+Cross-check [`../../kamae-scala/references/property-based-tests.md`](../../kamae-scala/references/property-based-tests.md). Suggest property tests when value-object validation, round trips, transition laws, or idempotency lack example-table coverage and generators can use public constructors.
+
+Do not require property tests for small closed enums, trivial getters, or code already guarded by compile-time state types.

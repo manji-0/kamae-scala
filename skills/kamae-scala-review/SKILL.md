@@ -108,6 +108,7 @@ Use probe output only to choose what to inspect. Do not report a finding until y
 | gRPC/Protobuf, message queues, cross-service contracts | `service-boundaries.md`, `boundary.md`, `persistence-events.md`, `tests.md` |
 | Error chain logging, duplicate error logs, stack traces in production paths | `error-handling.md`, `logging-metrics.md`, `tests.md` |
 | ScalaCheck, `forAll`, custom `Gen`, property regressions | `property-based-tests.md`, `tests.md`, nearby domain checklist |
+| Legacy / brownfield migration, strangler refactors | `adoption.md`, topic guide for current ladder rung, `tests.md` |
 | Test-only helpers, builders, fixtures, `compileErrors` coverage | `tests.md` |
 
 Use nearby checklists when a diff crosses concerns. Do not load unrelated files just to restate generic advice.

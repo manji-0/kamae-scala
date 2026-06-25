@@ -41,10 +41,11 @@ Read `build.sbt`, `project/*.sbt`, and module manifests relevant to the edited f
 - Boundary/serialization: `circe`; detection-only: `play-json`, `json4s`, `upickle`, `pureconfig`
 - Validation/units: `refined`; detection-only: `squants`
 - Logging/tracing/metrics: `slf4s`, `logback`, `trace4cats`; detection-only: `kanela-agent`
+- Secrets/credentials: load [`library-guides/secrets.md`](./library-guides/secrets.md) when API keys, tokens, or passwords appear in diff
 - Persistence: `doobie`; detection-only: `slick`, `quill`, `skunk`
 - Streams: `fs2`; detection-only: `pekko-stream`, `zio-streams`
 - Async/RPC: detection-only: `pekko`, `http4s`, `sttp`
-- Testing: `scalacheck`; detection-only: `munit`, `scalatest`, `weaver`
+- Testing: `scalacheck`, `munit-scalacheck`; detection-only: `munit`, `scalatest`, `weaver`
 
 If a library is relevant, load the matching file under [`references/library-guides/`](./references/library-guides/). Library guides cover library-specific defaults only; prefer the matching topic guide under `references/` for full patterns. If no library guide matches, use Scala 3 standard-library idioms before introducing a new dependency.
 

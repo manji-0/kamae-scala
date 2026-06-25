@@ -26,7 +26,7 @@ Core principles:
 
 ### `kamae-scala-review`
 
-Use during Scala code review. It walks severity-tagged checklist files for domain modeling, transitions, error handling, application wiring, aggregate transactions, boundary validation, PII protection, JNI/native boundaries, formatting/lints, Scaladoc, CI setup, persistence/events, service boundaries, and tests.
+Use during Scala code review. It walks severity-tagged checklist files for domain modeling, transitions, error handling, application wiring, aggregate transactions, boundary validation, PII protection, logging and metrics, JNI/native boundaries, formatting/lints, Scaladoc, CI setup, persistence/events, streams and continuous queries, domain macros and derivation, ORM adapters, service boundaries, property-based tests, and general tests.
 
 ## Packaging
 
