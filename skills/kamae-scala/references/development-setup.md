@@ -21,3 +21,10 @@ Follow the checklist in [`../../../DEVELOPMENT.md`](../../../DEVELOPMENT.md#work
 ## Templates
 
 Starter templates for application repos live under [`../assets/templates/`](../assets/templates/). Installed skills include files under the skill directory, but do not reliably install this repository's root `build.sbt`, `.github/`, or `scripts/`.
+
+Install templates into a target repository with [`../scripts/apply_templates.py`](../scripts/apply_templates.py):
+
+```bash
+python3 skills/kamae-scala/scripts/apply_templates.py --target /path/to/repo --dry-run
+python3 skills/kamae-scala/scripts/apply_templates.py --ci skill-package --skill-package --target /path/to/skill-repo
+```

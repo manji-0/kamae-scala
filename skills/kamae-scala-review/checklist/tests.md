@@ -9,9 +9,11 @@ Flag new validating constructors or DTO conversions without positive and negativ
 
 Flag new transition methods without tests for each documented error case.
 
-## 7.3 Are compile-time safety expectations documented or tested? - Medium
+## 7.3 Are compile-time safety expectations tested? - Medium
 
-When runtime checks replace compile-time states, flag missing tests proving illegal transitions fail.
+Flag typed source states without munit `compileErrors` (or equivalent) tests proving illegal target states do not compile.
+
+See [`../../kamae-scala/examples/src/test/scala/kamae/examples/CompileTimeSafetySuite.scala`](../../kamae-scala/examples/src/test/scala/kamae/examples/CompileTimeSafetySuite.scala).
 
 ## 7.4 Are mutator invariants tested? - Medium
 

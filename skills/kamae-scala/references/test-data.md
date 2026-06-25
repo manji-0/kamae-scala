@@ -11,6 +11,22 @@ def requestId(value: String = "req-1"): RequestId =
 
 Prefer `Either` assertions in tests over `.get` when verifying failure paths.
 
+## Compile-Time Safety Tests
+
+When separate state types enforce transition sources, add munit `compileErrors` tests so illegal states cannot compile:
+
+```scala
+test("EnRouteRequest is not WaitingRequest"):
+  val errors = compileErrors("""
+    import example.domain.*
+    def onlyWaiting(request: WaitingRequest): Unit = ()
+    onlyWaiting(enRouteFixture)
+  """)
+  assert(errors.nonEmpty)
+```
+
+See [`../examples/src/test/scala/kamae/examples/CompileTimeSafetySuite.scala`](../examples/src/test/scala/kamae/examples/CompileTimeSafetySuite.scala).
+
 ## Keep PII Out of Fixtures
 
 Use synthetic identifiers in committed fixtures. Do not copy production exports into the repository.

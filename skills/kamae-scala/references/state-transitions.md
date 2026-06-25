@@ -113,3 +113,5 @@ See [`persistence-events.md`](./persistence-events.md) for repository expectatio
 ## Canonical Example
 
 [`../examples/src/main/scala/kamae/examples/TaxiRequest.scala`](../examples/src/main/scala/kamae/examples/TaxiRequest.scala)
+
+[`../examples/src/test/scala/kamae/examples/CompileTimeSafetySuite.scala`](../examples/src/test/scala/kamae/examples/CompileTimeSafetySuite.scala) uses munit `compileErrors` to assert that `EnRouteRequest` cannot be used where `WaitingRequest` is required.

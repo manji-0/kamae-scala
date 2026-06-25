@@ -1,0 +1,9 @@
+target/
+.bsp/
+.metals/
+.idea/
+.vscode/
+project/target/
+project/project/
+__pycache__/
+.env
