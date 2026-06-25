@@ -31,6 +31,7 @@ CHECKLISTS = (
     "dev-environment",
     "persistence-events",
     "stream-continuous-queries",
+    "domain-macros",
     "orm-adapters",
     "service-boundaries",
     "property-based-tests",
@@ -85,8 +86,11 @@ PATTERN_RULES: list[tuple[str, re.Pattern[str], tuple[str, ...], tuple[str, ...]
     ),
     (
         "codec-derive",
-        re.compile(r"\b(Decoder\.derived|Encoder\.derived|Json\.format|Reads\.derived|Writes\.derived)\b"),
-        ("boundary", "domain-modeling"),
+        re.compile(
+            r"\b(Decoder\.derived|Encoder\.derived|Json\.format|Reads\.derived|Writes\.derived|"
+            r"derives\s+(Decoder|Encoder|Codec|Read|Write)|Configuration\.derive|inline def|macro )"
+        ),
+        ("domain-macros", "boundary", "domain-modeling"),
         (),
     ),
     (

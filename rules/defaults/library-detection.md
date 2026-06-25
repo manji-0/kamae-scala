@@ -19,12 +19,13 @@ Guide-backed detections:
 - `org.tpolecat` with `doobie` -> `references/library-guides/doobie.md`
 - `co.fs2` -> `references/library-guides/fs2.md`
 - `com.typesafe.slick` -> `references/library-guides/slick.md`
+- `eu.timepit.refined` -> `references/library-guides/refined.md`
 
 Detection-only libraries:
 
 - Error/effects: `monix`
 - Boundary/serialization: `play-json`, `json4s`, `upickle`
-- Validation/units: `eu.timepit.refined`, `org.typelevel.squants`
+- Validation/units: `org.typelevel.squants`
 - Persistence: `quill`, `skunk`
 - Streams: `pekko-stream`, `zio-streams`
 - Testing: `org.scalacheck` -> load `property-based-tests.md`; detection-only: `weaver`, `scalatest`

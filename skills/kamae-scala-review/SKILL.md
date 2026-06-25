@@ -66,16 +66,17 @@ links to its topic guide under `../kamae-scala/references/`.
 | 11 | `dev-environment.md` | `dev-environment.md` |
 | 12 | `persistence-events.md` | `persistence-events.md` |
 | 13 | `stream-continuous-queries.md` | `stream-continuous-queries.md` |
-| 14 | `service-boundaries.md` | `service-boundaries.md` |
-| 15 | `property-based-tests.md` | `property-based-tests.md` |
-| 16 | `application-wiring.md` | `application-wiring.md` |
-| 17 | `aggregate-transactions.md` | `aggregate-transactions.md` |
-| 18 | `orm-adapters.md` | `orm-adapters.md` |
-| 19 | `tests.md` | `test-data.md`, `property-based-tests.md` |
+| 14 | `domain-macros.md` | `domain-macros.md` |
+| 15 | `service-boundaries.md` | `service-boundaries.md` |
+| 16 | `property-based-tests.md` | `property-based-tests.md` |
+| 17 | `application-wiring.md` | `application-wiring.md` |
+| 18 | `aggregate-transactions.md` | `aggregate-transactions.md` |
+| 19 | `orm-adapters.md` | `orm-adapters.md` |
+| 20 | `tests.md` | `test-data.md`, `property-based-tests.md` |
 
 ## Review Probe
 
-The optional probe at [`scripts/review_probe.py`](./scripts/review_probe.py) scans Scala files for patterns that commonly route to Kamae checklists: native boundaries, suppressions, throws/unsafe gets, codec derives, PII terms, persistence/event code, and Scaladoc gaps.
+The optional probe at [`scripts/review_probe.py`](./scripts/review_probe.py) scans Scala files for patterns that commonly route to Kamae checklists: native boundaries, suppressions, throws/unsafe gets, codec derives and macro usage, PII terms, persistence/event code, streams/ORM adapters, and Scaladoc gaps.
 
 Use probe output only to choose what to inspect. Do not report a finding until you have read the relevant code and confirmed a reachable invariant break, leak, unsoundness risk, or project-policy violation.
 
@@ -83,7 +84,7 @@ Use probe output only to choose what to inspect. Do not report a finding until y
 
 | Changed area | Load these checklists first |
 | --- | --- |
-| Domain types / states | `domain-modeling.md`, `state-transitions.md`, `error-handling.md`, `tests.md` |
+| Domain types / states | `domain-modeling.md`, `state-transitions.md`, `error-handling.md`, `domain-macros.md`, `tests.md` |
 | HTTP/JSON/DB adapters | `boundary.md`, `orm-adapters.md`, `pii-protection.md`, `persistence-events.md`, `tests.md` |
 | Use cases / wiring | `application-wiring.md`, `effect-systems` via `application-wiring.md`, `aggregate-transactions.md`, `error-handling.md`, `tests.md` |
 | Streams / projections / outbox | `stream-continuous-queries.md`, `persistence-events.md`, `service-boundaries.md`, `tests.md` |
@@ -106,9 +107,10 @@ Use probe output only to choose what to inspect. Do not report a finding until y
 11. [`checklist/dev-environment.md`](./checklist/dev-environment.md)
 12. [`checklist/persistence-events.md`](./checklist/persistence-events.md)
 13. [`checklist/stream-continuous-queries.md`](./checklist/stream-continuous-queries.md)
-14. [`checklist/service-boundaries.md`](./checklist/service-boundaries.md)
-15. [`checklist/property-based-tests.md`](./checklist/property-based-tests.md)
-16. [`checklist/application-wiring.md`](./checklist/application-wiring.md)
-17. [`checklist/aggregate-transactions.md`](./checklist/aggregate-transactions.md)
-18. [`checklist/orm-adapters.md`](./checklist/orm-adapters.md)
-19. [`checklist/tests.md`](./checklist/tests.md)
+14. [`checklist/domain-macros.md`](./checklist/domain-macros.md)
+15. [`checklist/service-boundaries.md`](./checklist/service-boundaries.md)
+16. [`checklist/property-based-tests.md`](./checklist/property-based-tests.md)
+17. [`checklist/application-wiring.md`](./checklist/application-wiring.md)
+18. [`checklist/aggregate-transactions.md`](./checklist/aggregate-transactions.md)
+19. [`checklist/orm-adapters.md`](./checklist/orm-adapters.md)
+20. [`checklist/tests.md`](./checklist/tests.md)

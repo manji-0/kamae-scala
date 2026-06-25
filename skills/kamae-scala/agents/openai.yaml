@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kamae Scala"
+  short_description: "Robust Scala domain design"
+  default_prompt: "Use $kamae-scala to implement, refactor, or fix Scala domain validation with typed states and Either errors."

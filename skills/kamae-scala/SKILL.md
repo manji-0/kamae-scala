@@ -39,7 +39,7 @@ Read `build.sbt`, `project/*.sbt`, and module manifests relevant to the edited f
 
 - Error/effects: `cats`, `zio`; detection-only: `monix`, `fs2`
 - Boundary/serialization: `circe`; detection-only: `play-json`, `json4s`, `upickle`, `pureconfig`
-- Validation/units: detection-only: `refined`, `squants`
+- Validation/units: `refined`; detection-only: `squants`
 - Logging/tracing/metrics: `slf4s`, `logback`, `trace4cats`; detection-only: `kanela-agent`
 - Persistence: `doobie`; detection-only: `slick`, `quill`, `skunk`
 - Streams: `fs2`; detection-only: `pekko-stream`, `zio-streams`
@@ -74,6 +74,7 @@ applying the primary topic.
 - Persistence and Events: [`references/persistence-events.md`](./references/persistence-events.md)
 - ORM Adapters: [`references/orm-adapters.md`](./references/orm-adapters.md)
 - Streams and Continuous Queries: [`references/stream-continuous-queries.md`](./references/stream-continuous-queries.md)
+- Domain Macros and Derivation: [`references/domain-macros.md`](./references/domain-macros.md)
 - Effect Systems: [`references/effect-systems.md`](./references/effect-systems.md)
 - Service Boundaries: [`references/service-boundaries.md`](./references/service-boundaries.md)
 - Test Data: [`references/test-data.md`](./references/test-data.md)
