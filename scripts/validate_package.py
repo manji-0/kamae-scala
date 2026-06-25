@@ -169,6 +169,12 @@ REF_LINK_RE = re.compile(r"^\s*\[[^\]]+\]:\s+(\S+)", re.MULTILINE)
 DIRECTIVE_RE = re.compile(r"<!--\s*(?:constrained-by|blocked-by|supersedes|derived-from)\s+([^>]+?)\s*-->")
 
 
+def markdown_link_scan_text(text: str) -> str:
+    """Drop fenced and inline code so Scala/Rust syntax is not parsed as links."""
+    without_fences = re.sub(r"```.*?```", "", text, flags=re.DOTALL)
+    return re.sub(r"`[^`\n]+`", "", without_fences)
+
+
 def split_link_target(target: str) -> tuple[str, str]:
     target = unquote(target.strip().split()[0])
     if "#" in target:
@@ -186,7 +192,8 @@ def check_markdown_links(errors: list[str]) -> None:
         if ".git" in path.parts or ".dagayn" in path.parts:
             continue
         text = path.read_text(encoding="utf-8")
-        targets = LINK_RE.findall(text) + REF_LINK_RE.findall(text) + DIRECTIVE_RE.findall(text)
+        scan_text = markdown_link_scan_text(text)
+        targets = LINK_RE.findall(scan_text) + REF_LINK_RE.findall(scan_text) + DIRECTIVE_RE.findall(text)
         for raw_target in targets:
             target_path, anchor = split_link_target(raw_target)
             if should_skip_target(target_path):

@@ -65,11 +65,13 @@ links to its topic guide under `../kamae-scala/references/`.
 | 10 | `ci-setup.md` | `ci-setup.md` |
 | 11 | `dev-environment.md` | `dev-environment.md` |
 | 12 | `persistence-events.md` | `persistence-events.md` |
-| 13 | `service-boundaries.md` | `service-boundaries.md` |
-| 14 | `property-based-tests.md` | `property-based-tests.md` |
-| 15 | `application-wiring.md` | `application-wiring.md` |
-| 16 | `aggregate-transactions.md` | `aggregate-transactions.md` |
-| 17 | `tests.md` | `test-data.md`, `property-based-tests.md` |
+| 13 | `stream-continuous-queries.md` | `stream-continuous-queries.md` |
+| 14 | `service-boundaries.md` | `service-boundaries.md` |
+| 15 | `property-based-tests.md` | `property-based-tests.md` |
+| 16 | `application-wiring.md` | `application-wiring.md` |
+| 17 | `aggregate-transactions.md` | `aggregate-transactions.md` |
+| 18 | `orm-adapters.md` | `orm-adapters.md` |
+| 19 | `tests.md` | `test-data.md`, `property-based-tests.md` |
 
 ## Review Probe
 
@@ -82,8 +84,9 @@ Use probe output only to choose what to inspect. Do not report a finding until y
 | Changed area | Load these checklists first |
 | --- | --- |
 | Domain types / states | `domain-modeling.md`, `state-transitions.md`, `error-handling.md`, `tests.md` |
-| HTTP/JSON/DB adapters | `boundary.md`, `pii-protection.md`, `persistence-events.md`, `tests.md` |
-| Use cases / wiring | `application-wiring.md`, `aggregate-transactions.md`, `error-handling.md`, `tests.md` |
+| HTTP/JSON/DB adapters | `boundary.md`, `orm-adapters.md`, `pii-protection.md`, `persistence-events.md`, `tests.md` |
+| Use cases / wiring | `application-wiring.md`, `effect-systems` via `application-wiring.md`, `aggregate-transactions.md`, `error-handling.md`, `tests.md` |
+| Streams / projections / outbox | `stream-continuous-queries.md`, `persistence-events.md`, `service-boundaries.md`, `tests.md` |
 | Logging/metrics | `logging-metrics.md`, `pii-protection.md`, `tests.md` |
 | Native/JNI modules | `jni-native-boundaries.md`, `boundary.md`, `tests.md` |
 | Build/CI only | `ci-setup.md`, `fmt-lint.md` |
@@ -102,8 +105,10 @@ Use probe output only to choose what to inspect. Do not report a finding until y
 10. [`checklist/ci-setup.md`](./checklist/ci-setup.md)
 11. [`checklist/dev-environment.md`](./checklist/dev-environment.md)
 12. [`checklist/persistence-events.md`](./checklist/persistence-events.md)
-13. [`checklist/service-boundaries.md`](./checklist/service-boundaries.md)
-14. [`checklist/property-based-tests.md`](./checklist/property-based-tests.md)
-15. [`checklist/application-wiring.md`](./checklist/application-wiring.md)
-16. [`checklist/aggregate-transactions.md`](./checklist/aggregate-transactions.md)
-17. [`checklist/tests.md`](./checklist/tests.md)
+13. [`checklist/stream-continuous-queries.md`](./checklist/stream-continuous-queries.md)
+14. [`checklist/service-boundaries.md`](./checklist/service-boundaries.md)
+15. [`checklist/property-based-tests.md`](./checklist/property-based-tests.md)
+16. [`checklist/application-wiring.md`](./checklist/application-wiring.md)
+17. [`checklist/aggregate-transactions.md`](./checklist/aggregate-transactions.md)
+18. [`checklist/orm-adapters.md`](./checklist/orm-adapters.md)
+19. [`checklist/tests.md`](./checklist/tests.md)

@@ -41,7 +41,8 @@ Read `build.sbt`, `project/*.sbt`, and module manifests relevant to the edited f
 - Boundary/serialization: `circe`; detection-only: `play-json`, `json4s`, `upickle`, `pureconfig`
 - Validation/units: detection-only: `refined`, `squants`
 - Logging/tracing/metrics: `slf4s`, `logback`, `trace4cats`; detection-only: `kanela-agent`
-- Persistence: detection-only: `doobie`, `slick`, `quill`, `skunk`
+- Persistence: `doobie`; detection-only: `slick`, `quill`, `skunk`
+- Streams: `fs2`; detection-only: `pekko-stream`, `zio-streams`
 - Async/RPC: detection-only: `pekko`, `http4s`, `sttp`
 - Testing: `scalacheck`; detection-only: `munit`, `scalatest`, `weaver`
 
@@ -71,6 +72,9 @@ applying the primary topic.
 - Development Environment: [`references/dev-environment.md`](./references/dev-environment.md)
 - Skill Repository Setup: [`references/development-setup.md`](./references/development-setup.md)
 - Persistence and Events: [`references/persistence-events.md`](./references/persistence-events.md)
+- ORM Adapters: [`references/orm-adapters.md`](./references/orm-adapters.md)
+- Streams and Continuous Queries: [`references/stream-continuous-queries.md`](./references/stream-continuous-queries.md)
+- Effect Systems: [`references/effect-systems.md`](./references/effect-systems.md)
 - Service Boundaries: [`references/service-boundaries.md`](./references/service-boundaries.md)
 - Test Data: [`references/test-data.md`](./references/test-data.md)
 - Property-Based Tests: [`references/property-based-tests.md`](./references/property-based-tests.md)

@@ -16,14 +16,17 @@ Guide-backed detections:
 - `org.typelevel` with `cats` -> `references/library-guides/cats.md`
 - `dev.zio` -> `references/library-guides/zio.md`
 - `com.github.pureconfig` -> `references/library-guides/pureconfig.md`
+- `org.tpolecat` with `doobie` -> `references/library-guides/doobie.md`
+- `co.fs2` -> `references/library-guides/fs2.md`
+- `com.typesafe.slick` -> `references/library-guides/slick.md`
 
 Detection-only libraries:
 
-- Error/effects: `monix`, `fs2`
+- Error/effects: `monix`
 - Boundary/serialization: `play-json`, `json4s`, `upickle`
 - Validation/units: `eu.timepit.refined`, `org.typelevel.squants`
-- Persistence: `doobie`, `slick`, `quill`, `skunk`
-- Async/RPC: `pekko`, `http4s`, `sttp`
+- Persistence: `quill`, `skunk`
+- Streams: `pekko-stream`, `zio-streams`
 - Testing: `org.scalacheck` -> load `property-based-tests.md`; detection-only: `weaver`, `scalatest`
 
 Detection-only means the library should inform local code review or implementation context, but there is no plugin guide to load. Prefer existing project conventions and Scala 3 standard patterns before adding dependencies.

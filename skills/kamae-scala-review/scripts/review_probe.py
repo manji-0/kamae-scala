@@ -30,6 +30,8 @@ CHECKLISTS = (
     "ci-setup",
     "dev-environment",
     "persistence-events",
+    "stream-continuous-queries",
+    "orm-adapters",
     "service-boundaries",
     "property-based-tests",
     "application-wiring",
@@ -57,6 +59,18 @@ PATTERN_RULES: list[tuple[str, re.Pattern[str], tuple[str, ...], tuple[str, ...]
             re.IGNORECASE,
         ),
         ("pii-protection", "logging-metrics"),
+        (),
+    ),
+    (
+        "stream-feeds",
+        re.compile(r"\b(fs2\.|ZStream|Pekko|Source\.|outbox|projection|subscribe)\b"),
+        ("stream-continuous-queries", "persistence-events", "service-boundaries"),
+        (),
+    ),
+    (
+        "orm-adapters",
+        re.compile(r"\b(doobie|slick|quill|ConnectionIO|DBIO|Transactor|TableQuery)\b"),
+        ("orm-adapters", "boundary", "persistence-events"),
         (),
     ),
     (
