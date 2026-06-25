@@ -1,14 +1,29 @@
-# Application Wiring Checklist
-Reference: [`../../kamae-scala/references/application-wiring.md`](../../kamae-scala/references/application-wiring.md).
+# 17 — Application Wiring
 
-## 15.1 Are use cases wired through ports? - High
+Topic guide: [`../kamae-scala/references/application-wiring.md`](../kamae-scala/references/application-wiring.md)
 
-Flag use cases constructing JDBC/HTTP clients directly.
+## 18.1 Use Case Single Operation
 
-## 15.2 Is the composition root the only wiring site? - Medium
+- Does each use case class own one business operation?
+- Are there use case classes accumulating many unrelated methods that should be split?
 
-Flag adapter construction scattered across domain modules.
+## 18.2 Composition Root Only
 
-## 15.3 Are errors mapped at the edge? - Medium
+- Are concrete adapters wired only in the bootstrap module (`Main`, `Bootstrap`, ZIO `App` layer)?
+- Do domain and application packages depend on traits, not JDBC/HTTP drivers or concrete implementations?
+- Are there `new ConcreteRepository(...)` calls outside the composition root?
 
-Flag transport layers returning raw `Throwable` messages to clients.
+## 18.3 Pure Domain Transitions
+
+- Are domain transitions free of SQL, JSON parsing, HTTP calls, or other side effects?
+- Do use cases orchestrate (load state, call transition, persist) without leaking infrastructure into transitions?
+
+## 18.4 Edge Error Mapping
+
+- Do HTTP/gRPC/CLI adapters map `UseCaseError` to response codes and client-safe messages?
+- Are repository exception strings or stack traces prevented from leaking to clients?
+
+## 18.5 Test Wiring
+
+- Do use case tests inject fakes or in-memory ports rather than real infrastructure?
+- Can business logic be tested without a database, HTTP server, or external service?

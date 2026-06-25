@@ -107,6 +107,42 @@ Review checklist headings define canonical numeric check IDs. Rule toggles may a
 | `11.3` | `ci-risk-tied-safety-jobs` | CI setup |
 | `11.4` | `ci-advisory-check-clarity` | CI setup |
 | `11.5` | `ci-local-reproduction` | CI setup |
+| `12.1` | `dev-env-toolchain-pinned` | Dev environment |
+| `12.2` | `dev-env-local-check-loop` | Dev environment |
+| `12.3` | `dev-env-fake-port-test-isolation` | Dev environment |
+| `13.1` | `log-structured-context` | Logging and metrics |
+| `13.2` | `log-no-pii-in-default-level` | Logging and metrics |
+| `13.3` | `log-correlation-ids` | Logging and metrics |
+| `13.4` | `log-no-duplicate-error-chain` | Logging and metrics |
+| `13.5` | `metrics-domain-counters` | Logging and metrics |
+| `14.1` | `stream-backpressure-bounded` | Streams and continuous queries |
+| `14.2` | `stream-error-supervision` | Streams and continuous queries |
+| `14.3` | `projection-idempotent-offset` | Streams and continuous queries |
+| `14.4` | `stream-resource-safety` | Streams and continuous queries |
+| `15.1` | `macro-justified-repetition` | Domain macros |
+| `15.2` | `macro-no-hidden-throw` | Domain macros |
+| `15.3` | `derive-boundary-only-codecs` | Domain macros |
+| `15.4` | `macro-visible-expansion` | Domain macros |
+| `16.1` | `service-no-business-logic-in-routes` | Service boundaries |
+| `16.2` | `service-anti-corruption-layer` | Service boundaries |
+| `16.3` | `service-resilience-in-adapters` | Service boundaries |
+| `16.4` | `service-contract-versioning` | Service boundaries |
+| `17.1` | `property-constructor-roundtrip` | Property-based tests |
+| `17.2` | `property-transition-laws` | Property-based tests |
+| `17.3` | `property-gen-through-constructors` | Property-based tests |
+| `17.4` | `property-shrink-diagnostics` | Property-based tests |
+| `18.1` | `wiring-use-case-single-operation` | Application wiring |
+| `18.2` | `wiring-composition-root-only` | Application wiring |
+| `18.3` | `wiring-pure-domain-transitions` | Application wiring |
+| `18.4` | `wiring-edge-error-mapping` | Application wiring |
+| `18.5` | `wiring-test-fakes` | Application wiring |
+| `19.1` | `aggregate-single-transaction` | Aggregate transactions |
+| `19.2` | `aggregate-optimistic-concurrency` | Aggregate transactions |
+| `19.3` | `aggregate-scope-minimal` | Aggregate transactions |
+| `19.4` | `aggregate-cross-eventual-consistency` | Aggregate transactions |
+| `20.1` | `orm-row-domain-separation` | ORM adapters |
+| `20.2` | `orm-adapter-behind-port` | ORM adapters |
+| `20.3` | `orm-no-domain-import-of-driver` | ORM adapters |
 
 Example disabling a check:
 

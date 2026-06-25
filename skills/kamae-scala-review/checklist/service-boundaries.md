@@ -1,14 +1,23 @@
-# Service Boundaries Checklist
-Reference: [`../../kamae-scala/references/service-boundaries.md`](../../kamae-scala/references/service-boundaries.md).
+# 15 — Service Boundaries
 
-## 13.1 Is transport code free of business rules? - High
+Topic guide: [`../kamae-scala/references/service-boundaries.md`](../kamae-scala/references/service-boundaries.md)
 
-Flag controllers or route handlers implementing transitions directly.
+## 16.1 No Business Logic in Routes
 
-## 13.2 Are foreign models kept at the edge? - Medium
+- Do HTTP routes, gRPC services, and message consumers only translate requests to commands, invoke use cases, and map errors?
+- Is there business logic (validation, state checks, calculations) embedded in route handlers?
 
-Flag external service DTOs referenced inside domain packages.
+## 16.2 Anti-Corruption Layer
 
-## 13.3 Is resilience confined to adapters? - Medium
+- When integrating with external services, are local DTOs defined and mapped into domain types?
+- Do foreign models leak into domain transitions or repository ports?
 
-Flag retry/timeouts configured inside domain transitions.
+## 16.3 Resilience in Adapters
+
+- Do timeouts, retries, and circuit breakers live in infrastructure clients, not domain code?
+- Do use cases interpret retryable errors without configuring thread pools or HTTP clients?
+
+## 16.4 Contract Versioning
+
+- For gRPC and message queue contracts, are schemas versioned explicitly?
+- Are optional fields used to silently evolve contracts without consumers noticing breakage?

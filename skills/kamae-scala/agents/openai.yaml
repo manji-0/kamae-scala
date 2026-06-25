@@ -1,4 +1,9 @@
 interface:
   display_name: "Kamae Scala"
   short_description: "Robust Scala domain design"
-  default_prompt: "Use $kamae-scala to implement, refactor, or fix Scala domain validation with typed states and Either errors."
+  default_prompt:
+    - "Use $kamae-scala to implement, refactor, or fix Scala domain validation with typed states and Either errors."
+    - "Use $kamae-scala to model this domain concept with opaque types and validated constructors."
+    - "Use $kamae-scala to wire this use case with port injection and pure transitions."
+    - "Use $kamae-scala to add boundary DTO parsing for this API endpoint."
+    - "Use $kamae-scala to bootstrap a new Scala 3 project with Kamae conventions."

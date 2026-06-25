@@ -1,14 +1,25 @@
-# Aggregate Transactions Checklist
-Reference: [`../../kamae-scala/references/aggregate-transactions.md`](../../kamae-scala/references/aggregate-transactions.md).
+# 18 — Aggregate Transactions
 
-## 16.1 Is one aggregate changed per transaction when practical? - High
+Topic guide: [`../kamae-scala/references/aggregate-transactions.md`](../kamae-scala/references/aggregate-transactions.md)
 
-Flag multi-root mutations depending on caller persistence discipline.
+## 19.1 Single Transaction Boundary
 
-## 16.2 Is optimistic concurrency handled? - Medium
+- Does each use case persist one aggregate's state and events in a single transaction?
+- Are there dual writes (e.g. save state then separately insert events) that could leave inconsistent data?
 
-Flag version fields ignored during updates.
+## 19.2 Optimistic Concurrency
 
-## 16.3 Is cross-aggregate work orchestrated explicitly? - Medium
+- Do concurrently-updated aggregates carry a version field?
+- Does the adapter check `WHERE version = :expected` and return a typed retryable error on mismatch?
+- Does the use case handle `StaleVersion` explicitly (retry or propagate)?
 
-Flag hidden cross-aggregate updates inside a single aggregate object.
+## 19.3 Aggregate Scope
+
+- Does the aggregate contain only data it needs to validate its own invariants?
+- Are there fields read but never validated together, suggesting the aggregate is too large?
+- Do unrelated lifecycles share one root unnecessarily?
+
+## 19.4 Cross-Aggregate Coordination
+
+- When two aggregates change, does the code rely on domain events and eventual consistency rather than a single transaction spanning both?
+- If synchronous cross-aggregate coordination exists, is the coupling documented and failure handling explicit?
