@@ -48,3 +48,7 @@ jobs:
 
       - name: Generate Scaladoc
         run: sbt doc
+
+      - name: Kamae review probe
+        run: python3 path/to/kamae-scala/skills/kamae-scala-review/scripts/review_probe.py src/main/scala --json
+        continue-on-error: true

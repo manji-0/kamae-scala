@@ -20,12 +20,14 @@ Guide-backed detections:
 - `co.fs2` -> `references/library-guides/fs2.md`
 - `com.typesafe.slick` -> `references/library-guides/slick.md`
 - `eu.timepit.refined` -> `references/library-guides/refined.md`
+- `org.scalacheck` -> `references/library-guides/scalacheck.md`
 
 Detection-only libraries:
 
 - Error/effects: `monix`
 - Boundary/serialization: `play-json`, `json4s`, `upickle`
 - Validation/units: `org.typelevel.squants`
+- Secrets/credentials: load `references/library-guides/secrets.md` when auth tokens or API keys appear in diff
 - Persistence: `quill`, `skunk`
 - Streams: `pekko-stream`, `zio-streams`
 - Testing: `org.scalacheck` -> load `property-based-tests.md`; detection-only: `weaver`, `scalatest`

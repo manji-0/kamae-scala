@@ -14,6 +14,13 @@ This guide is for contributors working on the `kamae-scala` skill package itself
 ./scripts/ci.sh
 ```
 
+When changing `skills/kamae-scala-review/scripts/review_probe.py`, run the probe
+unit tests (included in `./scripts/ci.sh`):
+
+```bash
+python3 -m unittest discover -s skills/kamae-scala-review/scripts -p 'review_probe_test.py' -v
+```
+
 ## Adding Topics
 
 Follow the checklist in [`../../../DEVELOPMENT.md`](../../../DEVELOPMENT.md#working-on-skills).

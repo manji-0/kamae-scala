@@ -13,6 +13,9 @@ python3 skills/kamae-scala-review/scripts/review_probe.py \
   skills/kamae-scala/examples/src/main/scala \
   --json
 
+echo "==> Review probe tests"
+python3 -m unittest discover -s skills/kamae-scala-review/scripts -p 'review_probe_test.py' -v
+
 echo "==> Scala formatting"
 sbt scalafmtCheckAll
 
